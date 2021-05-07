@@ -7,15 +7,15 @@ class Solution:
         right=i
         left=i-1
         result=[]
-        while right <= len(nums) and left >= 0:
+        while right < len(nums) and left >= 0:
             if nums[right]**2<nums[left]**2:
                 result.append(nums[right]**2)
                 right+=1
-            elif nums[left]**2<nums[right]**2:
+            else:
                 result.append(nums[left]**2)
                 left-=1
         
-        while right <= len(nums):
+        while right < len(nums):
             result.append(nums[right]**2)
             right+=1
         
@@ -27,4 +27,4 @@ class Solution:
                 
 
 sol = Solution()
-print(sol.sortedSquares([-4,-1-0,3,10])
+print(sol.sortedSquares([-4,-1,0,3,10]))
