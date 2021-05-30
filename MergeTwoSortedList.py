@@ -30,7 +30,7 @@ class Solution:
             else:
                 # After sanity check move into main code
                 smallerVal = 0
-                    if l1.val < l2.val:
+                if l1.val < l2.val:
                     smallerVal = l1.val
                     l1 = l1.next
                 else:
